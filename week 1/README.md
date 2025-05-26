@@ -14,9 +14,8 @@ week 1 colab.ipynb
 	•	Description: Jupyter Notebook that walks through the setup of a basic ML pipeline on Vertex AI.
 	•	Key Steps:
 	•	Connects to Google Cloud using gcloud and sets the project.
-	•	Uploads the dataset to Cloud Storage.
 	•	Creates and trains a basic scikit-learn model using the Iris dataset.
-	•	Deploys the model to Vertex AI and enables endpoint testing.
+	•	Deploys the model to Vertex AI and saves it onto the created bucket.
 
 iris.csv
 	•	Description: Standard Iris dataset used for training the ML model.
@@ -25,10 +24,11 @@ iris.csv
 ⸻
 
 ✅ Setup Instructions
-	1.	Open the notebook in Google Colab or JupyterLab.
-	2.	Authenticate and set your GCP project.
-	3.	Upload iris.csv to a GCS bucket.
+	1.	Authenticate and set your GCP project by creating an instance.
+	2.	Open the notebook in JupyterLab in your Vertex Ai Workbench.
+	3.	Upload iris.csv
 	4.	Run through the notebook cells to train and deploy the model.
+ 	5.	Save the model onto the created Bucket.
 
 ⸻
 
