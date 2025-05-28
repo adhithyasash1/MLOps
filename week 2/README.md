@@ -12,9 +12,9 @@ The goal of this assignment is to incorporate Data Version Control (DVC) into th
 
 🔧 Initial Setup
 
-git init
-git clone https://github.com/iterative/example-versioning
-cd example-versioning
+```git init```
+```git clone https://github.com/iterative/example-versioning```
+```cd example-versioning```
 
 	•	Initialize Git.
 	•	Clone the example versioning repo which simulates a project structure.
