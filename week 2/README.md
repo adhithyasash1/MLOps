@@ -22,33 +22,33 @@ The goal of this assignment is to incorporate Data Version Control (DVC) into th
 
 🐍 Python Environment Setup
 
-python3 -m venv .env
-source .env/bin/activate
-pip install -r requirements.txt
-pip install dvc
+```python3 -m venv .env```
+```source .env/bin/activate```
+```pip install -r requirements.txt```
+```pip install dvc```
 
 	•	Create a virtual environment and activate it.
 	•	Install required Python packages and DVC.
 
 📥 First Dataset Fetch & Model Training
 
-dvc get https://github.com/iterative/dataset-registry tutorials/versioning/data.zip
-unzip -q data.zip
-rm -f data.zip
+```dvc get https://github.com/iterative/dataset-registry tutorials/versioning/data.zip```
+```unzip -q data.zip```
+```rm -f data.zip```
 
 	•	Download the dataset using DVC.
 	•	Unzip and clean up the archive.
 
-dvc add data
-python train.py
-dvc add model.weights.h5
+```dvc add data```
+```python train.py```
+```dvc add model.weights.h5```
 
 	•	Track the data folder and the trained model with DVC.
 	•	Train the model on the initial dataset.
 
-git add data.dvc model.weights.h5.dvc metrics.csv .gitignore
-git commit -m “first iteration done with 1000 images”
-git tag -a “v1.0” -m “model v1.0, 1000 images”
+```git add data.dvc model.weights.h5.dvc metrics.csv .gitignore```
+```git commit -m “first iteration done with 1000 images”```
+```git tag -a “v1.0” -m “model v1.0, 1000 images”```
 
 	•	Commit changes to Git.
 	•	Tag this state as version v1.0, representing the first model version trained on 1000 images.
@@ -57,23 +57,23 @@ git tag -a “v1.0” -m “model v1.0, 1000 images”
 
 📥 Second Dataset Fetch & Re-Training
 
-dvc get https://github.com/iterative/dataset-registry tutorials/versioning/new-labels.zip
-unzip -q new-labels.zip
-rm -f new-labels.zip
+```dvc get https://github.com/iterative/dataset-registry tutorials/versioning/new-labels.zip```
+```unzip -q new-labels.zip```
+```rm -f new-labels.zip```
 
 	•	Download an updated or extended dataset (new labels).
 	•	Unzip and remove the archive.
 
-dvc add data
-python train.py
-dvc add model.weights.h5
+```dvc add data```
+```python train.py```
+```dvc add model.weights.h5```
 
 	•	Re-track the updated dataset.
 	•	Retrain the model and track the new model weights.
 
-git add data.dvc model.weights.h5.dvc metrics.csv .gitignore
-git commit -m “second iteration done with 2000 images”
-git tag -a “v2.0” -m “model v2.0, 2000 images”
+```git add data.dvc model.weights.h5.dvc metrics.csv .gitignore```
+```git commit -m “second iteration done with 2000 images”```
+```git tag -a “v2.0” -m “model v2.0, 2000 images”```
 
 	•	Commit and tag the updated state as version v2.0.
 
@@ -81,14 +81,14 @@ git tag -a “v2.0” -m “model v2.0, 2000 images”
 
 🔁 Reproducibility Check via Version Checkout
 
-git checkout v1.0
-dvc checkout
+```git checkout v1.0```
+```dvc checkout```
 
 	•	Switch back to version v1.0 of the project.
 	•	DVC restores the corresponding dataset and model version.
 
-git checkout v1.0 data.dvc
-dvc checkout data.dvc
+```git checkout v1.0 data.dvc```
+```dvc checkout data.dvc```
 
 	•	(Optional/fine-grained) Restores just the data version tracked under v1.0.
 
