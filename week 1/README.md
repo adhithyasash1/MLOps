@@ -1,5 +1,3 @@
-⸻
-
 Vertex AI ML Pipeline Setup - Week 1
 
 📌 Objective
@@ -36,5 +34,3 @@ iris.csv
 	•	A Google Cloud Platform account with Vertex AI enabled.
 	•	GCS bucket for dataset storage.
 	•	IAM permissions to use Vertex AI and AI Platform services.
-
-⸻
